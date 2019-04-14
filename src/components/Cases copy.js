@@ -37,7 +37,7 @@ const mapDispatchToProps = dispatch => ({
     dispatch({ type: UPDATE_FIELD_EDITOR, key, value })
 });
 
-class Cases extends React.Component {
+class Shop extends React.Component {
   constructor() {
     super();
 
@@ -98,9 +98,6 @@ class Cases extends React.Component {
     this.props.onUnload();
   }
 
-  onClick(){
-    window.location.href="https://hbsp.harvard.edu/coursepacks";
-}
   render() {
     return (
       <div className="cases-page">
@@ -117,4 +114,4 @@ class Cases extends React.Component {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Cases);
+export default Shop;

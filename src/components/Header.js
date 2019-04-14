@@ -51,7 +51,7 @@ const LoggedInView = props => {
 
         <li className="nav-item">
           <Link
-            to="/cases"
+            to="/shop"
             className="navbartitle2">
             SHOP
           </Link>

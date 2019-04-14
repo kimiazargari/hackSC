@@ -22,20 +22,6 @@ const mapStateToProps = state => ({
       textAlign: 'center'
   }
 
-const mapDispatchToProps = dispatch => ({
-  onAddTag: () =>
-    dispatch({ type: ADD_TAG }),
-  onLoad: payload =>
-    dispatch({ type: EDITOR_PAGE_LOADED, payload }),
-  onRemoveTag: tag =>
-    dispatch({ type: REMOVE_TAG, tag }),
-  onSubmit: payload =>
-    dispatch({ type: ARTICLE_SUBMITTED, payload }),
-  onUnload: payload =>
-    dispatch({ type: EDITOR_PAGE_UNLOADED }),
-  onUpdateField: (key, value) =>
-    dispatch({ type: UPDATE_FIELD_EDITOR, key, value })
-});
 
 class Shop extends React.Component {
   constructor() {
@@ -77,44 +63,254 @@ class Shop extends React.Component {
     };
   }
 
-  componentWillReceiveProps(nextProps) {
-    if (this.props.match.params.slug !== nextProps.match.params.slug) {
-      if (nextProps.match.params.slug) {
-        this.props.onUnload();
-        return this.props.onLoad(agent.Articles.get(this.props.match.params.slug));
-      }
-      this.props.onLoad(null);
-    }
-  }
-
-  componentWillMount() {
-    if (this.props.match.params.slug) {
-      return this.props.onLoad(agent.Articles.get(this.props.match.params.slug));
-    }
-    this.props.onLoad(null);
-  }
-
-  componentWillUnmount() {
-    this.props.onUnload();
-  }
-
   onClick(){
     window.location.href="https://hbsp.harvard.edu/coursepacks";
 }
   render() {
-    return (
-      <div className="shop-page">
-        <div className="container page">
-          <div className="row">
-            <div className="col-md-10 offset-md-1 col-xs-12">
-            hi please populate shopping page
+return (
+<div className="settings-page">
+    <div className="container page">
+    {/*<h3 className="text-xs-center">your newsfeed</h3>*/}
+    <div className="bannerbanner">
+      <div className="container">
+        <div/> &nbsp;
+        <div/> &nbsp;
+        <div/> &nbsp;
 
-            </div>
-          </div>
-        </div>
+<div class="quiz-window">
+  <div class="quiz-window-header">
+    <div class="quiz-window-title">handpicked selections for you</div>
+  </div>
+  <div class="quiz-window-body">
+    <div class="gui-window-awards">
+      {/*<ul class="guiz-awards-row guiz-awards-header">
+        <li class="guiz-awards-header-star">&nbsp;</li>
+        <li class="guiz-awards-header-title">Award</li>
+        <li class="guiz-awards-header-track">This Track</li>
+        <li class="guiz-awards-header-time">All Time</li>
+      </ul>*/}
+
+
+        <table>
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket1.png')} /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket2.png')} /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket3.png')} /></td>
+  </tr>
+
+  <tr> &nbsp;
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket4.png')} /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket5.png')} /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket6.png')} /></td>
+  </tr>
+
+    <tr> &nbsp;
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket7.png')} /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket8.png')} /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket9.png')} /></td>
+  </tr>
+
+    <tr> &nbsp;
+  </tr>
+
+  <tr>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket10.png')} /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket11.png')} /></td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td><img marginLeft="200px" width="150" height="150" src={require('./images/jacket12.png')} /></td>
+  </tr>
+    <tr> &nbsp;
+  </tr>
+</table>
+
+
+
+
+    </div>
+    <div class="guiz-awards-buttons"><button class="guiz-awards-but-back"><i class="fa fa-angle-left"></i> Back</button></div>
+  </div>
+</div>
+
+
+
+
+
+
+        <div/> &nbsp;
+        <div/> &nbsp;
+        <p className="bannertitle">hi</p>
+        <div/> &nbsp;
       </div>
+    </div>
+    </div>
+    </div>
     );
   }
 }
 
-//export default Shop;
+export default Shop;

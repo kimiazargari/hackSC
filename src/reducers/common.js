@@ -18,7 +18,7 @@ import {
 } from '../constants/actionTypes';
 
 const defaultState = {
-  appName: 'suits',
+  appName: 'suit yourself',
   token: null,
   viewChangeCounter: 0
 };
