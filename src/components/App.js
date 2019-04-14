@@ -7,6 +7,7 @@ import { Route, Switch } from 'react-router-dom';
 import Article from '../components/Article';
 import Editor from '../components/Editor';
 import Give from '../components/Give';
+import Feed from '../components/Feed';
 import Home from '../components/Home';
 import Cases from '../components/Cases';
 import Attendy from '../components/Attendy';
@@ -59,9 +60,10 @@ class App extends React.Component {
             appName={this.props.appName}
             currentUser={this.props.currentUser} />
             <Switch>
-            <Route exact path="/" component={Home}/>
+            <Route exact path="/" component={Give}/>
             <Route path="/cases" component={Cases} />
             <Route path="/give" component={Give} />
+            <Route path="/feed" component={Feed} />
             <Route path="/attendy" component={Attendy} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />

@@ -46,7 +46,7 @@ class Login extends React.Component {
           <div className="row">
 
             <div className="col-md-6 offset-md-3 col-xs-12">
-              <h1 className="text-xs-center">Sign In</h1>
+              <h5 className="text-xs-center">This page will be replaced by a blockstack integration button, which will then create a pop up window.</h5>
               <p className="text-xs-center">
                 <Link to="/register">
                   Need an account?
@@ -62,7 +62,7 @@ class Login extends React.Component {
                     <input
                       className="form-control form-control-lg"
                       type="email"
-                      placeholder="Berkeley Email"
+                      placeholder="Email"
                       value={email}
                       onChange={this.changeEmail} />
                   </fieldset>

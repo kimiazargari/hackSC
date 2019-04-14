@@ -107,18 +107,7 @@ class Cases extends React.Component {
         <div className="container page">
           <div className="row">
             <div className="col-md-10 offset-md-1 col-xs-12">
-
-                  <div style={styles}><p>for your convenience, we've provided links to our cases below!</p></div>
-
-                  <div style={styles}>
-                  <button
-                    className="btn btn-lg pull-xs-right btn-primary"
-                    type="button"
-                    disabled={this.props.inProgress}
-                    onClick={this.onClick}>
-                    cases
-                  </button>
-                  </div>
+            hi please populate me
 
             </div>
           </div>

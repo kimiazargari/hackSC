@@ -66,7 +66,7 @@ onClick(){
         <div className="container page">
           <div className="row">
             <div style={styles}>
-            <img width="450" height="400" src={require('./logo.png')} />
+            {/*<img width="450" height="400" src={require('./logo.png')} />*/}
             </div>
 
                   {/*<div style={styles}>
@@ -75,7 +75,7 @@ onClick(){
                     type="button"
                     disabled={this.props.inProgress}
                     onClick={this.onClick}>
-                    login
+                    login here!
                   </button*/}
 
             {/*<MainView />*/}

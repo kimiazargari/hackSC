@@ -109,7 +109,7 @@ class Attendy extends React.Component {
           <div className="row">
             <div className="col-md-10 offset-md-1 col-xs-12">
 
-                  <div style={styles}><p>if accessing this in class, don't forget to record your attendance for today using attendy 😎👌</p></div>
+                  <div style={styles}><p>integrate fitting room app</p></div>
 
                   <div style={styles}>
                   <button
@@ -117,7 +117,7 @@ class Attendy extends React.Component {
                     type="button"
                     disabled={this.props.inProgress}
                     onClick={this.onClick}>
-                    attendy
+                    link to app
                   </button>
                   </div>
 

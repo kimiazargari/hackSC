@@ -7,17 +7,31 @@ import React from 'react';
       flexDirection: 'column'
   }
 
+
 const Banner = ({ appName, token }) => {
   if (token) {
     return null;
   }
   return (
-    <div className="banner">
+    <div className="bannerbanner">
       <div className="container">
+        <div/> &nbsp;
+        <div/> &nbsp;
+        <div/> &nbsp;
         <h1 className="logo-font">
-          {appName.toLowerCase()}
+          the new way to shop
         </h1>
-        <p>Give your teammates the feedback they deserve!</p>
+        <div/> &nbsp;
+        <div/> &nbsp;
+        <p className="bannertitle">welcome to the TailoredBrands virtual fitting room where we find clothes that look good on you so you don't have to. </p>
+        <div/> &nbsp;
+        <div/> &nbsp;
+        <div/> &nbsp;
+        <div/> &nbsp;
+          <div/> &nbsp;
+        <div/> &nbsp;
+        <div/> &nbsp;
+        <div/> &nbsp;
       </div>
     </div>
   );

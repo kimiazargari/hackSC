@@ -13,8 +13,8 @@ const LoggedOutView = props => {
         </li>*/}
 
         <li className="nav-item">
-          <Link to="/login" className="nav-link">
-            login
+          <Link to="/login" className="navbartitle2">
+            login using blockstack
           </Link>
         </li>
 
@@ -33,42 +33,44 @@ const LoggedOutView = props => {
 const LoggedInView = props => {
   if (props.currentUser) {
     return (
+      <div>
+      <div> &nbsp;</div>
       <ul className="nav navbar-nav pull-xs-right">
 
         <li className="nav-item">
-          <Link to="/give" className="nav-link">
-            <i className="ion-compose"></i>&nbsp;give
+          <Link to="/feed" className="navbartitle2">
+            FEED
           </Link>
         </li>
 
         <li className="nav-item">
           <Link
-            to={`/@${props.currentUser.username}`}
-            className="nav-link">
-            {/*{props.currentUser.username}'s feedback*/}
-            receive
+            to={/cases}/}
+            className="navbartitle2">
+            SHOP
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/cases" className="nav-link">
-            <i className="ion-ios-book"></i>&nbsp;cases
+          <Link to="/cases" className="navbartitle2">
+          FRIENDS
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/attendy" className="nav-link">
-            attendy
+          <Link to="/attendy" className="navbartitle2">
+          FITTING ROOM
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link to="/settings" className="nav-link">
-            <i className="ion-gear-a"></i>&nbsp;logout
+          <Link to="/settings" className="navbartitle2">
+          LOGOUT
           </Link>
         </li>
 
       </ul>
+      </div>
     );
   }
 
@@ -81,7 +83,7 @@ class Header extends React.Component {
       <nav className="navbar navbar-light">
         <div className="container">
 
-          <Link to="/" className="navbar-brand">
+          <Link to="/give" className="navbartitle">
             {this.props.appName.toLowerCase()}
           </Link>
 
