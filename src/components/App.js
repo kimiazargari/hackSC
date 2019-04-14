@@ -8,6 +8,7 @@ import Article from '../components/Article';
 import Editor from '../components/Editor';
 import Give from '../components/Give';
 import Feed from '../components/Feed';
+//import Shop from '../components/Shop';
 import Home from '../components/Home';
 import Cases from '../components/Cases';
 import Attendy from '../components/Attendy';
@@ -60,7 +61,7 @@ class App extends React.Component {
             appName={this.props.appName}
             currentUser={this.props.currentUser} />
             <Switch>
-            <Route exact path="/" component={Give}/>
+            <Route exact path="/" component={Feed}/>
             <Route path="/cases" component={Cases} />
             <Route path="/give" component={Give} />
             <Route path="/feed" component={Feed} />

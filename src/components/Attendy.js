@@ -121,6 +121,16 @@ class Attendy extends React.Component {
                   </button>
                   </div>
 
+                  <div style={styles}>
+                  <button
+                    className="btn btn-lg pull-xs-right btn-primary"
+                    type="button"
+                    disabled={this.props.inProgress}
+                    onClick={this.onClick}>
+                    Upload a photo
+                  </button>
+                  </div>
+
             </div>
           </div>
         </div>

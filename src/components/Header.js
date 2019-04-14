@@ -38,6 +38,12 @@ const LoggedInView = props => {
       <ul className="nav navbar-nav pull-xs-right">
 
         <li className="nav-item">
+          <Link to="/map" className="navbartitle2">
+            MAP
+          </Link>
+        </li>
+
+        <li className="nav-item">
           <Link to="/feed" className="navbartitle2">
             FEED
           </Link>
@@ -45,7 +51,7 @@ const LoggedInView = props => {
 
         <li className="nav-item">
           <Link
-            to={/cases}/}
+            to="/cases"
             className="navbartitle2">
             SHOP
           </Link>
