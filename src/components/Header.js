@@ -13,9 +13,9 @@ const LoggedOutView = props => {
         </li>*/}
 
         <li className="nav-item">
-          <Link to="/login" className="navbartitle2">
+          <a href="http://localhost:5000" className="navbartitle2">
             login using blockstack
-          </Link>
+          </a>
         </li>
 
         {/*<li className="nav-item">
@@ -31,16 +31,16 @@ const LoggedOutView = props => {
 };
 
 const LoggedInView = props => {
-  if (props.currentUser) {
+  if (true) { //props.currentUser
     return (
       <div>
       <div> &nbsp;</div>
       <ul className="nav navbar-nav pull-xs-right">
 
         <li className="nav-item">
-          <Link to="/map" className="navbartitle2">
+          <a href="http://localhost:8080" className="navbartitle2">
             MAP
-          </Link>
+          </a>
         </li>
 
         <li className="nav-item">

@@ -98,8 +98,19 @@ class Attendy extends React.Component {
     this.props.onUnload();
   }
 
-  onClick(){
-    window.location.href="https://attendy-171.firebaseapp.com/";
+  chooseFile() {
+        document.getElementById("fileInput").click();
+     }
+
+  show_image(src, width, height, alt) {
+    var img = document.createElement("img");
+    img.src = src;
+    img.width = width;
+    img.height = height;
+    img.alt = alt;
+
+    // This next line will just add it to the <body> tag
+    document.body.appendChild(img);
 }
 
   render() {
@@ -112,24 +123,13 @@ class Attendy extends React.Component {
                   <div style={styles}><p>integrate fitting room app</p></div>
 
                   <div style={styles}>
-                  <button
-                    className="btn btn-lg pull-xs-right btn-primary"
-                    type="button"
-                    disabled={this.props.inProgress}
-                    onClick={this.onClick}>
-                    link to app
-                  </button>
+
                   </div>
 
-                  <div style={styles}>
-                  <button
-                    className="btn btn-lg pull-xs-right btn-primary"
-                    type="button"
-                    disabled={this.props.inProgress}
-                    onClick={this.onClick}>
-                    Upload a photo
-                  </button>
+                  <div>
+                  <input type="file" id="fileInput" name="fileInput" />
                   </div>
+                  <button type="button" onclick="chooseFile();"></button>
 
             </div>
           </div>
