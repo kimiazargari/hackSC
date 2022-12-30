@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "cross-env": "^5.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "5.0.1"
   },
   "dependencies": {
     "history": "^4.6.3",
@@ -14,7 +14,7 @@
     "prop-types": "^15.5.10",
     "r": "0.0.5",
     "react": "^16.3.0",
-    "react-activity-feed": "^0.9.4",
+    "react-activity-feed": "^1.4.0",
     "react-dom": "^16.3.0",
     "react-redux": "^5.0.7",
     "react-router": "^4.1.2",
